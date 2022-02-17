@@ -1,0 +1,423 @@
+/* CSS CUSTOM PROPS */
+:root {
+    --nav-collapse-bg: rgba(221, 221, 221, 0.85);
+    --sub-heading-text: rgba(85, 117, 113, 1);
+    --pink-bg: rgba(232, 222, 210, 1);
+    --green-bg: rgba(148, 180, 164, 1);
+    --playfair: 'Playfair Display', serif;
+    --sans-serif: 'Montserrat', sans-serif;
+
+}
+
+/* GLOBAL RESET */
+body {
+    margin: 0;
+    font-family: var(--sans-serif);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* UTILITY CLASSES */
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+section {
+    min-height: 100vh;
+    display: flex;
+}
+
+.section-content {
+    width: 98%;
+    height: auto;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.pink-bg {
+    background-color: var(--pink-bg);
+}
+
+.green-bg {
+    background-color: var(--green-bg);
+}
+
+.section-heading {
+    font-family: var(--playfair);
+    margin-bottom: 0;
+    padding-top: 2rem;
+    color: var(--sub-heading-text);
+}
+
+/* NAVBAR STYLES */
+.navbar {
+    width: 25vw;
+}
+.navbar-collapse {
+    background: var(--nav-collapse-bg);
+}
+.nav-link {
+    font-family: var(--playfair), serif;
+    text-align: center;
+    color: black !important;
+}
+.nav-link:hover {
+    opacity: 0.7 !important;
+}
+
+/* LANDING PAGE STYLES */
+.main-heading {
+    text-align: center;
+    color: #557571;
+    font-family: var(--playfair), serif;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+}
+.main-heading:after {
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 37%; /* Change this to whatever width you want. */
+    padding-top: 20px; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid lightgray; /* This creates the border. Replace black with whatever color you want. */
+}
+.showcase {
+    height: 100vh;
+    width: 100%;
+    background-image: url("images/landingImg.jpg");
+    background-size: cover;
+    background-position: center;
+    -webkit-filter: blur(0px);
+    -webkit-animation: fadein linear 1.5s;
+}
+@-webkit-keyframes fadein {
+    0% {
+        -webkit-filter: blur(3x);
+    }
+    28% {
+        -webkit-filter: blur(3px);
+    }
+    56% {
+        -webkit-filter: blur(3px);
+    }
+    100% {
+        -webkit-filter: blur(0px);
+    }
+}
+
+.sub-heading {
+    text-align: center;
+    color: var(--sub-heading-text);
+    font-family: var(--playfair), serif;
+    margin: 0.5rem 0;
+}
+
+/* OUR STORY STYLES */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3%;
+    margin-bottom: 6rem;
+    height: auto;
+}
+
+.grid-child-3 {
+    grid-row: 1 / 3;
+}
+.grid-child-4 {
+    grid-row: 2 / 4;
+}
+
+#landing-page .showcase {
+    padding: 0;
+}
+
+#our-story figure {
+    padding: 0;
+    position: relative;
+    display: flex;
+    max-height: 520px;
+    max-width: 350px;
+}
+
+#our-story figcaption {
+    background-color: #001219;
+    color: white;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.6;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+}
+
+figcaption h4 {
+    font-size: 1rem;
+    color: var(--pink-bg)
+}
+
+#our-story p {
+    padding: 0 3rem;
+}
+
+/* SCHEDULE STYLES */
+
+
+/* VENUE INFO STYLES */
+#venue .flex-row div {
+    padding: 2rem;
+}
+
+.align-content-top {
+    align-items: flex-start;
+}
+
+.venue-text {
+    text-align: left;
+}
+
+
+/* EXPLORE IOWA STYLES */
+#explore .flex-row div {
+    padding: 2rem;
+}
+
+.heart-list li::marker {
+    font-size: 0.7rem;
+    content: "🖤"
+}
+.heart-list li {
+    padding-left: 15px;
+}
+
+.explore-img {
+    width: 600px;
+}
+
+#explore .heart-list li {
+    padding: 1rem;
+}
+
+/* RSVP STYLES */
+#rsvp {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.53'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    margin-top: 0;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 0 0;
+}
+
+#rsvp iframe {
+    height: 1000px;
+    width: 90%;
+    margin-top: 1rem;
+}
+
+
+
+/* FOOTER STYLES*/
+footer {
+    height: 50px;
+    text-align: center;
+}
+
+.footer-icon {
+    max-height: 20px;
+}
+
+footer span {
+    padding: 0 .2rem;
+    font-size: 1.2rem;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+    .flex-row {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+/* TABLET */
+@media (max-width: 800px) {
+
+    /* GLOBAL STYLES */
+    /*.flex-row {*/
+    /*    display: flex;*/
+    /*    flex-direction: column !important;*/
+    /*    align-items: center;*/
+    /*    justify-content: center;*/
+    /*}*/
+
+    /* NAV STYLES */
+    nav {
+        visibility: hidden;
+    }
+
+    /* OUR STORY STYLES */
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+    }
+
+    .gallery-image {
+        margin-top: 1rem;
+        height: auto;
+        width: 380px;
+    }
+
+    figcaption {
+        width: 380px;
+    }
+
+
+    .grid-child-6 {
+        order: 4;
+    }
+
+    figcaption h4 {
+        font-size: 1.2rem;
+    }
+
+    /* FOOT STYLES */
+    footer {
+        height: auto;
+    }
+
+    footer span:first-child {
+        padding: 15px 0 5px 0;
+    }
+
+
+    footer span:last-child {
+        padding: 5px 0 15px 0;
+    }
+
+}
+
+
+/* MOBILE */
+@media (max-width: 480px) {
+
+    /* UTILITY CLASSES */
+   .section-content {
+       width: 100%;
+       padding: 0;
+   }
+
+    .section-heading {
+        padding-top: 4rem;
+    }
+
+    p, li {
+        font-size: 1.2rem;
+    }
+
+
+    /* LANDING PAGE STYLES */
+    .main-heading {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    #landing-page h4 {
+        font-size: 1rem;
+        /*padding: 1rem .3rem;*/
+    }
+
+
+    /* OUR STORY STYLES */
+
+    .gallery-image {
+        max-width: 100%;
+    }
+    figcaption {
+        max-width: 100%;
+    }
+    figcaption h4 {
+        font-size: 1.5rem;
+    }
+
+    /* SCHEDULE STYLES */
+
+
+    /* VENUE STYLES*/
+    #venue .flex-row div {
+        width: 90%;
+        text-align: center;
+    }
+
+    #venue iframe {
+        width: 300px;
+        height: 420px;
+    }
+
+    .venue-text {
+        text-align: center;
+    }
+
+
+    /* EXPLORE IOWA STYLES */
+    .explore-img {
+        display: none;
+    }
+
+
+    /* RSVP STYLES */
+    #rsvp {
+        /*max-height: 1500px;*/
+    }
+
+    #rsvp iframe {
+        padding: 3rem 1rem;
+        width: 100%;
+        max-height: 1500px;
+    }
+
+    /* FOOTER STYLES */
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: .5rem;
+    }
+
+    footer span {
+        padding: 0 .2rem;
+        font-size: 1.2rem;
+    }
+
+}
