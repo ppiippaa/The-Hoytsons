@@ -264,9 +264,13 @@ footer span {
 @media (max-width: 1200px) {
     .flex-row {
         display: flex;
-        flex-direction: column !important;
+        flex-direction: column !important; ;
         align-items: center;
         justify-content: center;
+    }
+
+    footer {
+        height: 120px;
     }
 }
 
@@ -274,13 +278,6 @@ footer span {
 /* TABLET */
 @media (max-width: 800px) {
 
-    /* GLOBAL STYLES */
-    /*.flex-row {*/
-    /*    display: flex;*/
-    /*    flex-direction: column !important;*/
-    /*    align-items: center;*/
-    /*    justify-content: center;*/
-    /*}*/
 
     /* NAV STYLES */
     nav {
@@ -346,7 +343,6 @@ footer span {
     p, li {
         font-size: 1.2rem;
     }
-
 
     /* LANDING PAGE STYLES */
     .main-heading {
