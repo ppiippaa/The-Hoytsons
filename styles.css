@@ -6,6 +6,7 @@
     --green-bg: rgba(148, 180, 164, 1);
     --playfair: 'Playfair Display', serif;
     --sans-serif: 'Montserrat', sans-serif;
+    --dark-grey: rgb(55, 56, 55);
 
 }
 
@@ -54,6 +55,7 @@ section {
     text-align: center;
     gap: 2rem;
     padding: 2rem;
+    margin: 0 auto;
 }
 
 .pink-bg {
@@ -68,7 +70,11 @@ section {
     font-family: var(--playfair);
     margin-bottom: 0;
     padding-top: 2rem;
-    color: var(--sub-heading-text);
+    color: var(--dark-grey);
+}
+
+h5 {
+    font-weight: bold;
 }
 
 /* NAVBAR STYLES */
@@ -135,6 +141,26 @@ section {
     margin: 0.5rem 0;
 }
 
+
+/* WELCOME SECTION STYLES */
+#welcome {
+    height: 70vh;
+    width: 70vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#welcome h4,
+#welcome p {
+    padding: 2rem;
+}
+
+#welcome h4 {
+    font-family: var(--playfair);
+}
+
+
+
 /* OUR STORY STYLES */
 .grid-container {
     display: grid;
@@ -190,6 +216,55 @@ figcaption h4 {
 
 /* SCHEDULE STYLES */
 
+#schedule .section-content {
+    align-items: center;
+    justify-content: center;
+}
+#schedule .schedule-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.schedule-item {
+    height: 350px;
+    width: 220px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem;
+    background: rgb(217,214,210);
+    background: linear-gradient(159deg, rgba(217,214,210,1) 0%, rgba(233,233,233,1) 80%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
+
+.schedule-item h3 {
+    font-weight: bold;
+    font-family: var(--playfair);
+}
+
+.schedule-item h4 {
+    font-size: 1rem;
+}
+
+.schedule-item img {
+    padding: 10px 5px;
+
+}
+
+.schedule-item img:hover {
+    transform: translateY(-5px);
+}
+
+.schedule-item img {
+    height: 85px;
+    width: 85px;
+}
+
+
 
 /* VENUE INFO STYLES */
 #venue .flex-row div {
@@ -200,8 +275,38 @@ figcaption h4 {
     align-items: flex-start;
 }
 
+#venue address {
+    font-size: 1.3rem;
+    text-align: left;
+}
+
 .venue-text {
     text-align: left;
+}
+
+#venue h5 {
+    margin: 2.5rem 0 1rem 0;
+}
+
+/* ACCOMMODATION STYLES */
+#accommodation .flex-col {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.accomm-img {
+    height: 80px;
+    width: 80px;
+    margin: 2rem 0;
+}
+
+#accommodation .section-content {
+    margin: 0 auto;
+    width: 70%;
+}
+
+#accommodation .section-heading {
+    margin-bottom: 3rem;
 }
 
 
@@ -210,21 +315,91 @@ figcaption h4 {
     padding: 2rem;
 }
 
-.heart-list li::marker {
-    font-size: 0.7rem;
-    content: "🖤"
-}
-.heart-list li {
-    padding-left: 15px;
-}
-
 .explore-img {
     width: 600px;
+    border-radius: 4px;
 }
 
-#explore .heart-list li {
-    padding: 1rem;
+
+/* THINGS TO DO */
+.todo-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
 }
+
+.todos {
+    height: auto;
+    max-width: 90%;
+    min-width: 80%;
+    padding: 40px;
+    margin: 1.8rem 0;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
+
+.in-iowa {
+    background: rgb(227,227,227);
+    background: linear-gradient(167deg, rgba(227,227,227,1) 0%, rgba(251,247,247,1) 100%);
+}
+
+.further-afield {
+    background: rgb(155,189,172);
+    background: linear-gradient(167deg, rgba(155,189,172,1) 0%, rgba(254,247,247,1) 100%);
+}
+
+.even-further-afield {
+    background: rgb(232,222,210);
+    background: linear-gradient(167deg, rgba(232,222,210,1) 0%, rgba(254,247,247,1) 100%);
+}
+
+.todos h5 {
+    padding: 1.2rem;
+}
+
+
+#things-to-do ul {
+    text-align: left;
+}
+
+#things-to-do li {
+    list-style-type: none;
+    padding: .8rem;
+}
+
+#things-to-do li::marker {
+    content: "🖤";
+}
+
+.ul-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* FAQ STYLES */
+#faq li {
+    padding: 1rem;
+    list-style-type: none;
+}
+
+#faq ul {
+    margin-top: 2rem;
+}
+
+#faq .section-content {
+    margin: 0 auto;
+    width: 70%;
+}
+
+
 
 /* RSVP STYLES */
 #rsvp {
@@ -236,7 +411,7 @@ figcaption h4 {
 }
 
 #rsvp iframe {
-    height: 1000px;
+    min-height: 1100px;
     width: 90%;
     margin-top: 1rem;
 }
@@ -294,11 +469,11 @@ footer span {
     .gallery-image {
         margin-top: 1rem;
         height: auto;
-        width: 380px;
+        width: 100%;
     }
 
     figcaption {
-        width: 380px;
+        width: 100%;
     }
 
 
@@ -310,7 +485,50 @@ footer span {
         font-size: 1.2rem;
     }
 
-    /* FOOT STYLES */
+    /* SCHEDULE STYLES*/
+    #schedule {
+        height:auto;
+        padding-bottom: 6rem;
+    }
+
+    #schedule .section-content {
+        height: auto;
+    }
+    #schedule .schedule-container {
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .schedule-item {
+        width: 400px;
+        height: 300px;
+    }
+
+    #things-to-do .ul-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* ACCOMMODATION */
+    #accommodation .section-content {
+        width: 85%;
+    }
+
+    #accommodation p  {
+        width: 100%;
+    }
+
+    #accommodation img {
+        margin: 2rem 0;
+    }
+
+    /* FAQ */
+    #faq .section-content {
+        width: 85%;
+    }
+
+    /* FOOTER STYLES */
     footer {
         height: auto;
     }
@@ -329,7 +547,9 @@ footer span {
 
 /* MOBILE */
 @media (max-width: 480px) {
-
+    p, li {
+        font-size: 1rem;
+    }
     /* UTILITY CLASSES */
    .section-content {
        width: 100%;
@@ -340,9 +560,6 @@ footer span {
         padding-top: 4rem;
     }
 
-    p, li {
-        font-size: 1.2rem;
-    }
 
     /* LANDING PAGE STYLES */
     .main-heading {
@@ -355,6 +572,16 @@ footer span {
         /*padding: 1rem .3rem;*/
     }
 
+    /* WELCOME STYLES */
+    #welcome h4 {
+        margin: 0;
+        padding: 0.2rem 0;
+    }
+
+    #welcome p {
+        margin: 0;
+        font-size: 1rem;
+    }
 
     /* OUR STORY STYLES */
 
@@ -365,11 +592,34 @@ footer span {
         max-width: 100%;
     }
     figcaption h4 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+    #our-story p {
+        font-size: 1rem;
+    }
+    /* SCHEDULE STYLES */
+    #schedule {
+        padding-bottom: 3rem;
     }
 
-    /* SCHEDULE STYLES */
+    #schedule .schedule-container {
+        width: 100%;
+    }
 
+    #schedule .schedule-item {
+        height: 380px;
+        width: 70%;
+        padding: 10px;
+    }
+
+    .schedule-item img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .schedule-item h4 {
+        max-width: 80%;
+    }
 
     /* VENUE STYLES*/
     #venue .flex-row div {
@@ -384,6 +634,16 @@ footer span {
 
     .venue-text {
         text-align: center;
+        font-size: 1rem;
+    }
+
+    #venue address {
+        font-size: 1.2rem;
+    }
+
+    /* ACCOMMODATION STYLES */
+    #accommodation .section-content {
+        width: 80%;
     }
 
 
@@ -392,6 +652,20 @@ footer span {
         display: none;
     }
 
+
+    /* THINGS TO DO STYLES */
+    /*#things-to-do .ul-row {*/
+    /*    flex-direction: column;*/
+    /*}*/
+
+    /* FAQ STYLES */
+    #faq .section-content {
+        width: 88%;
+    }
+
+    .faq-list {
+        padding: 2rem 0 2.5rem 0;
+    }
 
     /* RSVP STYLES */
     #rsvp {
@@ -415,5 +689,7 @@ footer span {
         padding: 0 .2rem;
         font-size: 1.2rem;
     }
+
+
 
 }
