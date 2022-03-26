@@ -141,6 +141,10 @@ h5 {
     margin: 0.5rem 0;
 }
 
+#landing-page .showcase {
+    padding: 0;
+}
+
 
 /* WELCOME SECTION STYLES */
 #welcome {
@@ -167,7 +171,6 @@ h5 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 3%;
-    margin-bottom: 6rem;
     height: auto;
 }
 
@@ -176,10 +179,6 @@ h5 {
 }
 .grid-child-4 {
     grid-row: 2 / 4;
-}
-
-#landing-page .showcase {
-    padding: 0;
 }
 
 #our-story figure {
@@ -212,6 +211,10 @@ figcaption h4 {
 
 #our-story p {
     padding: 0 3rem;
+}
+
+.photo-credit {
+    margin-bottom: 3rem;
 }
 
 /* SCHEDULE STYLES */
